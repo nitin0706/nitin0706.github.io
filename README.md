@@ -1,67 +1,41 @@
-# online-resume
+# Developer's Resume Template
 
-[English](README.md) | [简体中文](README_CN.md)
+**Made with ❤️ by [Chrisko](https://chrisko.io/)**
 
----
+...and
 
-Yet another resume template based on Jekyll. You can write your resume using Markdown, it will be rendered into HTML and can be printed as PDF file.
+- [TailwindCSS](https://tailwindcss.com) - A utility-first CSS framework
+- [Vite](https://vitejs.dev) - Next Generation of Frontend Tooling
+- [Ionicons](https://ionicons.com) - Open source icons. Lovingly hand-crafted.
 
-Features:
+## Create your own resume - host it on GitHub PagesA
 
-+ Easy to use/edit/hide
-+ Jekyll + Markdown + Github Pages
-+ Multiple languages
-+ Multiple skins
-+ Content modular
-+ Responsive display
-+ Print-friendly
+This is a **template repository**.
 
-## Getting Started
+You can create your own copy of it by clicking on the green button _"Use this template"_ above the file list.
 
-### Usage
+[![Use this Template Button](./assets/template-button.png)](https://github.com/christiankozalla/dev-resume-template/generate)
 
-#### Quickly
+If you _"Include all branches"_ during the process, the template will already be online on GitHub Pages. The URL should be _https://\<USERNAME\>.github.io/\<REPO-NAME\>/_
 
-Fork this repository:
+Or you only copy the _main_ branch and deploy the project to GitHub Pages yourself.
 
-![](https://github.com/tarrex/online-resume/raw/master/assets/images/fork.png "fork this repository")
+More information about template repositories on the [GitHub Docs](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template)
 
-Edit the YAML file located in `_data/data.yml`:
+## Usage
 
-![](https://github.com/tarrex/online-resume/raw/master/assets/images/edit.png "edit the yaml file")
+`package.json` provides four scripts for development, build, preview and deploy. The first three are associated with Vite. The script _deploy_ uses [push-dir](https://github.com/L33T-KR3W/push-dir) to push the `dist` directory to the `gh-pages` branch.
 
-Setting the Github pages source branch in `settings -> Github Pages -> source`, select `master branch`:
+In order to deploy the local changes you made:
 
-![](https://github.com/tarrex/online-resume/raw/master/assets/images/source.png "select github pages source branch")
+```sh
+# Clear working tree
+$ git add .
+$ git commit -m "Before deploy"
 
-Wait a little while, open `https://YOUR_GITHUB_USERNAME.github.io/online-resume` in your browser. You can see your resume.
+# build project to dist directory
+$ npm run build
 
-with profile photo:
-
-![](https://github.com/tarrex/online-resume/raw/master/assets/images/resume1.png "resume with profile photo")
-
-without profile photo:
-
-![](https://github.com/tarrex/online-resume/raw/master/assets/images/resume2.png "resume without profile photo")
-
-If you want to print your resume, just press the shortcut of print. Also, it can be saved as a PDF file.
-
-#### Locally
-
-If you want to use it locally, you should clone this repository then just like deploying a regular Jekyll website.
-
-### Customization
-
-+ `_data/data.yml`: All the resume content.
-+ `assets/images/profile.png`: Your profile photo.
-+ `_config.yml`: Site's general settings.
-+ `index.html`: Change the resume content's display order.
-+ `_sass/_base.scss`: Change the resume display style.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
-## Others
-
-+ Hugo Version: [hugo-theme-online-resume](https://github.com/tarrex/hugo-theme-online-resume)
+# Use push-dir to push dist to gh-pages
+$ npm run deploy
+```
